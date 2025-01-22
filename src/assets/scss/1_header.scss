@@ -1,0 +1,116 @@
+.header {
+}
+.header__box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.header__left {
+}
+.header__imgWrp {
+  max-width: 100%;
+  max-height: 100%;
+}
+.header__img {
+  width: 100%;
+  height: 100%;
+}
+.header__wrp {
+  background-color: var(--mainColor);
+  color: #fff;
+  padding: 10px;
+  padding-right: 80px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/vosk.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.header__title {
+  @include h1Title;
+  margin-bottom: 10px;
+}
+.header__subTitle {
+}
+.header__right {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.header__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  li {
+    padding-left: 30px;
+    list-style-position: inside;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/check.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      left: 0;
+    }
+  }
+}
+.header__txt {
+  line-height: 20px;
+}
+.header__imgStar {
+  width: 200px;
+  height: auto;
+}
+.header__btnWrp {
+  text-align: center;
+}
+.header__btn {
+  background-color: var(--mainColor);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding: 20px 30px 10px 50px;
+  border-radius: 10px;
+  transition: 0.3s;
+  span {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/tel.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 40px;
+      aspect-ratio: 1;
+      left: -45px;
+      top: 28%;
+      transform: translateY(-50%);
+    }
+    &::after {
+      content: "Звоните нам 24/7";
+      position: absolute;
+      top: -15px;
+      left: 0;
+      font-size: 12px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &:hover {
+    background-color: #0f426e;
+    color: #fff;
+  }
+}
