@@ -1,0 +1,88 @@
+.forms {
+  margin-top: 50px;
+}
+form {
+}
+.forms__wrapper {
+}
+.forms__box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.forms__left {
+}
+.forms__title {
+  @include h2Title;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.forms__iconWrp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.forms__icon {
+  width: 25px;
+}
+.forms__button {
+  @include btn;
+  font-size: 16px;
+}
+.form__btnSendWrp {
+  padding-left: 35px;
+}
+.forms__right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.forms__subTitle {
+  @include h2Title;
+  margin-bottom: 10px;
+}
+.forms__imgWrp {
+  max-width: 100%;
+  max-height: 100%;
+}
+.forms__img {
+  width: 100%;
+  height: 100%;
+}
+.forms__ul {
+  line-height: 20px;
+  li:nth-child(3) {
+    color: #30ca80;
+  }
+}
+.forms__btnWhatWrp {
+  text-align: center;
+}
+.forms__What {
+  background-color: #00be62;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding: 10px 30px 10px 50px;
+  transition: 0.3s;
+  span {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/whatsupicon.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 30px;
+      aspect-ratio: 1;
+      left: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &:hover {
+    background-color:  #04a155;
+    color: #fff;
+  }
+}
