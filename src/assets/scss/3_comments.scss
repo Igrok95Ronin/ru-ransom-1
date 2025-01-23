@@ -1,0 +1,36 @@
+.comments {
+  margin-top: 50px;
+}
+.comments__box {
+}
+.comments__title {
+  @include h2Title;
+  background-color: transparent;
+  color: #000;
+  text-align: center;
+}
+.comments__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.comments__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.comments__imgUserWrp {
+}
+.comments__imgUser {
+  width: 200px;
+}
+.comments__name {
+  font-weight: 700;
+  padding-left: 50px;
+}
+.comments__txt {
+  line-height: 20px;
+}
+.comments__imgStars {
+  width: 180px;
+}
