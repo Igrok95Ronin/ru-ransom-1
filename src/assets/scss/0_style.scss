@@ -121,9 +121,14 @@ body {
   margin: 0;
 }
 @mixin h2Title {
-  font-size: clamp(28px, 5vw, 32px);
+  font-size: clamp(26px, 5vw, 30px);
   font-weight: 600;
   margin: 0;
+  background-color: var(--mainColor);
+  color: #fff;
+  padding: 5px 10px;
+  max-width: 90%;
+  transform: translateY(-30px);
 }
 @mixin btn {
   background-color: var(--mainColor);
