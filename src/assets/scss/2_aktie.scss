@@ -28,3 +28,64 @@
 .aktie__txt {
   line-height: 20px;
 }
+.aktie__btnWrp {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.aktie__btnTel {
+  @include btn;
+  span {
+    &::before {
+      top: 50%;
+    }
+  }
+}
+.aktie__btnWhat {
+  background-color: #00be62;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 20px;
+  padding: 10px 30px 10px 50px;
+  border-radius: 10px;
+  transition: 0.3s;
+  span {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/whatsupicon.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 30px;
+      aspect-ratio: 1;
+      left: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &:hover {
+    background-color: #04a155;
+    color: #fff;
+  }
+}
+.aktie__ul {
+  line-height: 20px;
+  list-style-type: disc;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.aktie__messageIcon {
+  @include btn;
+  span {
+    &::before {
+      top: 60%;
+      background-image: url("../img/sendicon.png");
+      background-size: contain;
+    }
+  }
+}
